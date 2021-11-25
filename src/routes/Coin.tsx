@@ -83,6 +83,15 @@ const Img = styled.img`
     margin-right : 10px;
 `;
 
+const Button = styled.button`
+    margin : 0px 15px;
+    display : flex;
+    font-size : 20px;
+    background-color : rgba(0, 0, 0, 0.5);
+    border-radius : 10px;
+    color: ${props => props.theme.textColor}
+`;
+
 interface RouteParams {
     coinId:string;
 }
@@ -184,6 +193,7 @@ function Coin() {
                 </title>
             </Helmet>
             <Header>
+                <Link to="/"><Button>⎋</Button></Link>
                 <Title>
                     {state?.name ? state.name : loading ? "Loading..." : infoData?.name}
                 </Title>
@@ -233,7 +243,7 @@ function Coin() {
                 </Tabs>
                 <Switch>
                     <Route path={`/:coinId/price`}>
-                        <Price />
+                        <Price coinId={coinId}/>
                     </Route>
                     <Route path={`/:coinId/chart`}>
                         <Chart coinId={coinId}/>

@@ -10,7 +10,10 @@
     "@types/node": "^16.11.7",
     "@types/react": "^17.0.35",
     "@types/react-dom": "^17.0.11",
+    "ag-grid-community": "^26.2.0",
+    "ag-grid-react": "^26.2.0",
     "apexcharts": "^3.30.0",
+    "gh-pages": "^3.2.3",
     "react": "^17.0.2",
     "react-apexcharts": "^1.3.9",
     "react-dom": "^17.0.2",
@@ -26,7 +29,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "deploy": "gh-pages -d build",
+    "predeploy": "yarn run build"
   },
   "eslintConfig": {
     "extends": [
@@ -34,6 +39,7 @@
       "react-app/jest"
     ]
   },
+  "homepage": "https://sdf5771.github.io/react-masterclass",
   "browserslist": {
     "production": [
       ">0.2%",
